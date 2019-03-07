@@ -19,6 +19,23 @@ services.AddCaching<IValues>(typeof(Values));
 
 Once all three steps are done, you can start placing the Cached(SecondsTillExpiry) attribute on any method with simple passed arguments as currently, the key to get a cached value is the direct method call toString!
 
+```CSHARP
+public class Values:IValues
+    {
+        [Cached(10)]
+        public string getOne()
+        {
+            return "value";
+        }
+
+        [Cached(30)]
+        public string[] getMany()
+        {
+            return new string[] {"value1", "value2"};
+        }
+    }
+```
+
 Anything other than string,int,decimal,long,char is not supported as of release 0.1.0 D: !!
 
 :)
