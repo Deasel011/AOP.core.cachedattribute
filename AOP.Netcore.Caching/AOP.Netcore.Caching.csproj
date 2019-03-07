@@ -1,7 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>0.1.0</Version>
+    <PackageId>AOP.core.MethodCaching</PackageId>
+    <Authors>Philippe Deslongchamps - Deasel011</Authors>
+    <Product>Method Caching (Aspect Oriented Programing)</Product>
+    <Company>StockGaze</Company>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Deasel011/AOP.core.cachedattribute</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
