@@ -20,7 +20,6 @@ namespace TestWebApp.Controllers
         }
         // GET api/values
         [HttpGet]
-        [Cached(10)]
         public ActionResult<IEnumerable<string>> Get()
         {
             return _iValues.getMany();
@@ -35,7 +34,6 @@ namespace TestWebApp.Controllers
         }
 
         // POST api/values
-        [Cached(50)]
         [HttpPost]
         public void Post([FromBody] string value)
         {

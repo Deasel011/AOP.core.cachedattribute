@@ -1,4 +1,5 @@
-﻿using AOP.Netcore.Caching;
+﻿using System;
+using AOP.Netcore.Caching;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -21,23 +22,9 @@ namespace TestWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMemoryCache();
-            services.AddTransient<Values>();
-
-            services.AddTransient(typeof(IValues), (provider) =>
-            {
-                return new Cached<IValues>(provider.GetRequiredService(typeof(IMemoryCache)), provider.GetRequiredService<Values>());
-            });
-
-
-
-            //services.AddTransient<IValues>((provider) =>
-            //{
-            //    return new Cached<Values>(provider.GetRequiredService<IMemoryCache>(), typeof(IValues)); });
-
-
-
-            //services.AddCaching<Values>(typeof(IValues));
+            services.AddMemoryCache(mco => new MemoryCacheOptions { ExpirationScanFrequency = new TimeSpan(0, 0, 0, 5) });
+            services.AddSingleton<Values>();
+            services.AddCaching<IValues>(typeof(Values));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
