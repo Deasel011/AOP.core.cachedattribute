@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOP.Netcore.Caching", "AOP.Netcore.Caching\AOP.Netcore.Caching.csproj", "{29ACCDF1-916F-4ED4-A375-D5814D2FD779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{26EACC52-9D8C-4C24-98E7-920CAB212FDE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleWebApp", "ExampleWebApp\ExampleWebApp.csproj", "{26EACC52-9D8C-4C24-98E7-920CAB212FDE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{55326F77-3E48-450B-A6DB-58F29EDECCCD}"
 	ProjectSection(SolutionItems) = preProject
